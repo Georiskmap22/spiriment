@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+    *,
+    ::before, 
+    ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: clamp(0.75em, 1.111vw, 1em);
+    }      
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: #FFFAEC;
+}
+
+.transitionEffect {
+    transition: all 0.3s linear;
+}
+
+.specialTransitionEffect {
+    transition: all 0.5s linear;
+}
+
+@theme {
+    --breakpoint-tabLarge: 1025px;
+    --breakpoint-tabMid: 800px;
+    --breakpoint-tab: 750px;
+    --breakpoint-mob: 560px;
+    --font-Jakarta: "Plus Jakarta Sans", sans-serif;
+    --color-primaryTheme: #1D2F21;
+    --color-darkTheme: #162419;
+    --color-secondaryTheme: #FFFAEC;
+    --color-secondaryTextTheme: #C0CBC3;
+    --color-black: #000000;
+    --color-primaryWhite: #EBEEEC;
+    --color-terracotaTheme: #5E3128;
+}
+
+
+@layer components {
+    .custom-width {
+        @apply w-[90%] mx-auto max-w-[1440px] lg:w-[83.33%]
+    }
+
+    .hoverEffect {
+        @apply hover:scale-105 active:scale-95 transition cursor-pointer
+    }
+
+    .basic-flex {
+        @apply flex items-center
+    }
+
+    .nav-link {
+        @apply leading-[160%] text-[1rem] text-primaryTheme capitalize hover:text-darkTheme
+    }
+
+    .small-texts {
+        @apply text-[1.5rem] leading-[160%]
+    }
+
+    .header-text {
+        @apply leading-[120%] font-bold
+    }
+
+    .label-text {
+        @apply font-medium text-[0.94rem] text-primaryWhite leading-[1.22rem]
+    }
+
+    .input-text {
+        @apply text-[0.94rem] text-terracotaTheme leading-[1.22rem] focus:outline-none
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hide-scrollbar {
+        -ms-overflow-style: none; /* IE/Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+}

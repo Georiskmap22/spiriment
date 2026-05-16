@@ -1,0 +1,9 @@
+[build]
+  base = "spiriment"
+  command = "npm run generate"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
