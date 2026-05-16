@@ -107,10 +107,12 @@
           <p class="text-sm mb-3" :style="{ color: themeColors.darkTheme }">Payment is processed through:</p>
           <div class="flex flex-wrap gap-3 mb-4">
             <div class="px-4 py-2 rounded-full text-sm flex items-center gap-2" :style="{ backgroundColor: themeColors.secondaryTheme, color: themeColors.primaryTheme }">
-              <span>🍎</span> Apple App Store (iOS)
+              <IconsAppleIcon color="black" class="w-4 h-4"/>
+              Apple App Store (iOS)
             </div>
             <div class="px-4 py-2 rounded-full text-sm flex items-center gap-2" :style="{ backgroundColor: themeColors.secondaryTheme, color: themeColors.primaryTheme }">
-              <span>🤖</span> Google Play Store (Android)
+              <IconsPlayStoreIcon color="black" class="w-4 h-4" />
+              Google Play Store (Android)
             </div>
           </div>
           <ul class="space-y-2">
@@ -137,7 +139,10 @@
             <!-- Apple -->
             <div class="p-4 rounded-lg" :style="{ backgroundColor: themeColors.secondaryTheme }">
               <h3 class="font-semibold mb-2 flex items-center gap-2" :style="{ color: themeColors.primaryTheme }">
-                <span>🍎</span> Apple App Store
+                <span>
+                  <IconsAppleIcon color="black" class="w-4 h-4"/>
+                </span> 
+                Apple App Store
               </h3>
               <ul class="space-y-1 text-sm" :style="{ color: themeColors.darkTheme }">
                 <li>• Cancel through your Apple ID account settings</li>
@@ -153,7 +158,10 @@
             <!-- Google -->
             <div class="p-4 rounded-lg" :style="{ backgroundColor: themeColors.secondaryTheme }">
               <h3 class="font-semibold mb-2 flex items-center gap-2" :style="{ color: themeColors.primaryTheme }">
-                <span>🤖</span> Google Play Store
+                <span>
+                  <IconsPlayStoreIcon color="black" class="w-4 h-4" />
+                </span> 
+                Google Play Store
               </h3>
               <ul class="space-y-1 text-sm" :style="{ color: themeColors.darkTheme }">
                 <li>• Cancel through your Google Play account settings</li>
@@ -191,7 +199,10 @@
             <!-- Apple Refund -->
             <div class="p-4 rounded-lg border" :style="{ borderColor: themeColors.secondaryTextTheme }">
               <h3 class="font-semibold mb-2 flex items-center gap-2" :style="{ color: themeColors.primaryTheme }">
-                <span>🍎</span> Apple App Store
+                <span>
+                  <IconsAppleIcon color="black" class="w-4 h-4"/>
+                </span> 
+                Apple App Store
               </h3>
               <p class="text-xs mb-2" :style="{ color: themeColors.darkTheme }">Request refunds directly from Apple:</p>
               <a href="https://reportaproblem.apple.com" target="_blank" 
@@ -206,7 +217,10 @@
             <!-- Google Refund -->
             <div class="p-4 rounded-lg border" :style="{ borderColor: themeColors.secondaryTextTheme }">
               <h3 class="font-semibold mb-2 flex items-center gap-2" :style="{ color: themeColors.primaryTheme }">
-                <span>🤖</span> Google Play Store
+                <span>
+                  <IconsPlayStoreIcon color="black" class="w-4 h-4" />
+                </span> 
+                Google Play Store
               </h3>
               <p class="text-xs mb-2" :style="{ color: themeColors.darkTheme }">Request refunds through your Google Play account:</p>
               <a href="https://play.google.com/store/account" target="_blank" 

@@ -53,16 +53,32 @@
                 
                     <!-- Phone -->
                     <article class="input-field w-full lg:w-138">
-                    <label for="phone" class="label-text text-sm md:text-base">Phone Number</label>
+                        <label for="phone" class="label-text text-sm md:text-base">Phone Number</label>
+                        <div class="mt-2 md:mt-[0.57rem] py-2 md:py-[0.66rem] px-3 md:px-[0.813rem] rounded-[624.9rem] bg-white">
+                            <input
+                            type="tel"
+                            id="phone"
+                            class="input-text w-full text-sm md:text-base"
+                            v-model="form.phone"
+                            />
+                        </div>
+                    </article>
+
+                      <!-- Country -->
+                    <!-- <article class="input-field w-full lg:w-138">
+                    <label for="country" class="label-text text-sm md:text-base">
+                        Country <span class="text-[#E0745F]">*</span>
+                    </label>
                     <div class="mt-2 md:mt-[0.57rem] py-2 md:py-[0.66rem] px-3 md:px-[0.813rem] rounded-[624.9rem] bg-white">
                         <input
-                        type="tel"
-                        id="phone"
+                        type="text"
+                        id="country"
                         class="input-text w-full text-sm md:text-base"
-                        v-model="form.phone"
+                        v-model="form.country"
+                        required
                         />
                     </div>
-                    </article>
+                    </article> -->
                 
                     <!-- Email -->
                     <article class="input-field w-full lg:w-138">

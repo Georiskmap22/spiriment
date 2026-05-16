@@ -43,7 +43,7 @@
           <span
             v-for="cat in faqCategories"
             :key="cat.id"
-            class="text-[0.72rem] font-medium text-primaryWhite/50 bg-white/8 border border-white/10 rounded-full px-3 py-1 cursor-pointer transitionEffect hover:bg-white/15"
+            class="text-[0.9rem] font-medium text-primaryWhite/50 bg-white/8 border border-white/10 rounded-full px-3 py-1 cursor-pointer transitionEffect hover:bg-white/15"
             @click="jumpToCategory(cat.id)"
           >
             {{ cat.label }} · {{ cat.faqs.length }}
@@ -151,7 +151,7 @@
                   :class="activeCategory === cat.id ? 'opacity-70' : 'opacity-35 group-hover:opacity-55'"
                   v-html="cat.icon"
                 />
-                <span class="text-[0.85rem] font-medium leading-[140%] flex-1">{{ cat.label }}</span>
+                <span class="text-[0.9rem] font-medium leading-[140%] flex-1">{{ cat.label }}</span>
                 <span
                   class="text-[0.68rem] font-bold tabletLarge:inline rounded-full px-2 py-0.5 transitionEffect"
                   :class="activeCategory === cat.id
@@ -165,7 +165,7 @@
 
             <!-- Stats -->
             <div class="mt-5 bg-primaryTheme/5 rounded-2xl px-4 py-4">
-              <p class="text-[0.75rem] text-secondaryTextTheme leading-[170%]">
+              <p class="text-[0.8rem] text-secondaryTextTheme leading-[170%]">
                 <span class="font-bold text-primaryTheme">{{ totalQuestions }}</span> questions across
                 <span class="font-bold text-primaryTheme">{{ faqCategories.length }}</span> categories.
               </p>
@@ -184,8 +184,8 @@
                   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" v-html="cat.icon" class="text-secondaryTheme *:stroke-secondaryTheme" />
                 </div>
                 <div>
-                  <h2 class="text-[1.05rem] font-bold leading-[130%] text-primaryTheme">{{ cat.label }}</h2>
-                  <p class="text-[0.75rem] text-secondaryTextTheme mt-0.5">
+                  <h2 class="text-[1.15rem] font-bold leading-[130%] text-primaryTheme">{{ cat.label }}</h2>
+                  <p class="text-[0.85rem] text-secondaryTextTheme mt-0.5">
                     {{ cat.faqs.length }} {{ cat.faqs.length === 1 ? 'question' : 'questions' }}
                   </p>
                 </div>
@@ -206,13 +206,13 @@
                     :aria-expanded="openKey === cat.id + i"
                     @click="toggle(cat.id + i)"
                   >
-                    <span class="text-[0.95rem] font-semibold leading-[150%] text-primaryTheme">{{ faq.question }}</span>
+                    <span class="text-[1.2rem] font-semibold leading-[150%] text-primaryTheme">{{ faq.question }}</span>
                     <IconsAccordionIcon :open="openKey === cat.id + i" />
                   </button>
 
                   <Transition name="accordion">
                     <div v-if="openKey === cat.id + i" class="px-5 pb-5">
-                      <div class="border-t border-primaryTheme/8 pt-3 text-[0.9rem] leading-[170%] text-primaryTheme/65">
+                      <div class="border-t border-primaryTheme/8 pt-3 text-[0.95rem] leading-[170%] text-primaryTheme/65">
                         {{ faq.answer }}
                       </div>
                     </div>

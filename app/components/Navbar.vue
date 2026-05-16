@@ -1,5 +1,5 @@
 <template>
-    <nav class="custom-width py-4 md:py-[1.1rem] basic-flex justify-between relative">
+    <nav class="custom-width py-4 md:py-[1.1rem] basic-flex justify-between relative z-99999999999">
         <!-- Logo -->
         <div class="logo">
             <nuxt-link to="/">
@@ -213,10 +213,10 @@
                                 hello@spiriment.org
                             </a>
                             <div class="flex space-x-4">
-                                <a href="#" class="text-secondaryTextTheme hover:text-secondaryTheme transition-colors">
+                                <a href="/privacy" class="text-secondaryTextTheme hover:text-secondaryTheme transition-colors">
                                     Privacy Policy
                                 </a>
-                                <a href="#" class="text-secondaryTextTheme hover:text-secondaryTheme transition-colors">
+                                <a href="/terms" class="text-secondaryTextTheme hover:text-secondaryTheme transition-colors">
                                     Terms
                                 </a>
                             </div>
