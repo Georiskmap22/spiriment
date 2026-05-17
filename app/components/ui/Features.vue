@@ -74,9 +74,9 @@ const texts1 = [
 
 const images = [
     '/images/mobileSnapshot.png',
-    '/images/mobileSnapshot2.png', // Replace with actual image paths
-    '/images/mobileSnapshot3.png',
-    '/images/mobileSnapshot4.png'
+    '/images/mobileSnapshot.png', // Replace with actual image paths
+    '/images/mobileSnapshot.png',
+    '/images/mobileSnapshot.png'
 ]
 
 const texts2 = [

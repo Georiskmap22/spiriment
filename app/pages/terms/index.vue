@@ -72,7 +72,7 @@
             <span class="w-7 h-7 rounded-full text-xs flex items-center justify-center font-mono" :style="{ backgroundColor: themeColors.terracotaTheme, color: themeColors.primaryWhite }">1</span>
             Free Trial (14 Days)
           </h2>
-          <p class="text-sm mb-3" :style="{ color: themeColors.darkTheme }">Spiriment may offer a 14-day free trial to eligible new users.</p>
+          <p class="text-sm mb-3" :style="{ color: themeColors.darkTheme }">Spiriment may offer a 7-day free trial to eligible new users.</p>
           <ul class="space-y-2 mb-4">
             <li v-for="(item, index) in freeTrialItems" :key="index" class="flex items-start gap-2 text-sm" :style="{ color: themeColors.darkTheme }">
               <span class="mt-1" :style="{ color: themeColors.terracotaTheme }">•</span>
