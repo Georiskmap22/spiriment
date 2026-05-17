@@ -336,7 +336,7 @@ const contactEmail = 'support@spiriment.com'
 
 // Table of contents items
 const tocItems = [
-  { num: '01', id: 'free-trial', title: 'Free Trial (14 Days)' },
+  { num: '01', id: 'free-trial', title: 'Free Trial (7 Days)' },
   { num: '02', id: 'subscription-renewal', title: 'Subscription & Renewal' },
   { num: '03', id: 'payment', title: 'Payment Method' },
   { num: '04', id: 'cancellation', title: 'Cancellation' },
@@ -350,7 +350,7 @@ const tocItems = [
 // Free trial items
 const freeTrialItems = [
   'The free trial is available once per account unless otherwise stated.',
-  'You will not be charged during the 14-day trial period.',
+  'You will not be charged during the 7-day trial period.',
   'Unless cancelled at least 24 hours before the trial ends, your subscription will automatically convert into a paid subscription at the price displayed at the time of purchase.',
   'By starting a free trial, you authorize the applicable app store provider to charge your selected payment method after the trial period ends unless cancelled.'
 ]
