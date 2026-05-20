@@ -387,7 +387,7 @@ const themeColors = {
 
 // Contact information
 const contactEmail = 'spiriment@gmail.com'
-const contactUrl = 'http://www.spiriment.com/contact'
+const contactUrl = 'https://www.spiriment.com/contact'
 
 // Table of contents items
 const tocItems = [
@@ -523,9 +523,9 @@ const usRights = [
 
 // Exercise methods with HTML
 const exerciseMethods = [
-  'Visiting <a href="http://www.spiriment.com/contact" class="hover:underline" style="color: #5E3128;">http://www.spiriment.com/contact</a>',
+  'Visiting <a href="https://www.spiriment.com/contact" class="hover:underline" style="color: #5E3128;">https://www.spiriment.com/contact</a>',
   'Emailing us at <a href="mailto:spiriment@gmail.com" class="hover:underline" style="color: #5E3128;">spiriment@gmail.com</a>',
-  'Visiting <a href="http://www.spiriment.com" class="hover:underline" style="color: #5E3128;">http://www.spiriment.com</a>'
+  'Visiting <a href="https://www.spiriment.com" class="hover:underline" style="color: #5E3128;">https://www.spiriment.com</a>'
 ]
 
 // Add smooth scrolling
