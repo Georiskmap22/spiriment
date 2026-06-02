@@ -6,11 +6,13 @@
                  Use your skills to help people grow in their walk with God
              </h1>
              <p class="mt-4 mb-6 small-texts text-[1.125rem] md:text-[1.25rem] lg:text-[1.5rem] text-secondaryTheme">
-                 We're building Spiriment with faith and code, and we need volunteers who believe in both. If you're a designer, developer, writer, pastor, or just passionate about discipleship, we'd love to build with you
+                 We're building Spiriment with faith and code, and we need experts who believe in both. If you're a designer, developer, writer, social media manager, or just passionate about discipleship, we'd love to build with you
              </p>
-             <button class="w-fit mx-auto py-3 px-5 md:py-4 md:px-6 rounded-[6.25rem] bg-secondaryTheme text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] text-terracotaTheme font-bold">
-                 Apply to Volunteer
-             </button>
+             <a href="#application-form">
+                <button class="w-fit mx-auto py-3 px-5 md:py-4 md:px-6 rounded-[6.25rem] bg-secondaryTheme text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] text-terracotaTheme font-bold">
+                    Apply Now
+                </button>
+             </a>
           </div>
           <div class="mt-6 md:mt-7 lg:mt-8.5 w-full md:w-fit mx-auto max-w-full md:max-w-249">
              <NuxtImg src="/images/volunteer.png" class="w-full md:w-auto"/>
@@ -27,12 +29,14 @@
             <li>Designers</li>
             <li>Developers</li>
             <li>Content Creators</li>
-            <li>Spiritual Leaders</li>
-            <li>Community Builder</li>
+            <li>Social Media Manager</li>
+            <li>Product Ambassador</li>
          </ul>
-         <button class="w-fit mx-auto py-4 px-6 rounded-[6.25rem] bg-terracotaTheme text-secondaryTheme">
-            Apply to Volunteer
-         </button>
+         <a href="#application-form">
+            <button class="w-fit mx-auto py-4 px-6 rounded-[6.25rem] bg-terracotaTheme text-secondaryTheme">
+               Apply Now
+            </button>
+         </a>
       </div>
       <div class="w-76.5 mt-[0.94rem] max-tab:hidden">
          <NuxtImg src="/icons/volunteer1.svg" class="w-full"/>
@@ -53,7 +57,7 @@
       <h2 class="text-terracotaTheme header-text text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] w-full lg:w-[33.67%] text-center lg:text-left leading-tight">
          Ready to join the mission?
       </h2>
-        <form class="flex flex-col gap-3 md:gap-4 w-full lg:w-auto" @submit.prevent="submit">
+        <form class="flex flex-col gap-3 md:gap-4 w-full lg:w-auto" @submit.prevent="submit" id="application-form">
          <!-- Full Name / Organization -->
          <article class="input-field w-full lg:w-138">
             <label for="organization" class="label-text text-terracotaTheme text-sm md:text-base">
@@ -103,7 +107,7 @@
          <!-- Skill -->
          <article class="input-field w-full lg:w-138">
             <label for="skill" class="label-text text-terracotaTheme text-sm md:text-base">
-            Skill or area you'd like to help in <span class="text-[#E0745F]">*</span>
+            Skill or area you'd like to apply in <span class="text-[#E0745F]">*</span>
             </label>
             <div class="mt-2 md:mt-[0.57rem] py-2 md:py-[0.66rem] px-3 md:px-[0.813rem] rounded-[624.9rem] bg-white border-[#F5D4CD] shadow-[0px_1px_2px_rgba(0,0,0,0.05)] border">
             <input
@@ -136,7 +140,7 @@
          <!-- Message -->
          <article class="input-field w-full lg:w-138">
             <label for="message" class="label-text text-terracotaTheme text-sm md:text-base">
-            Why you'd like to volunteer
+            Why you'd like to work with us
             </label>
             <div class="mt-2 md:mt-[0.57rem] py-2 md:py-[0.66rem] px-3 md:px-[0.813rem] rounded-2xl md:rounded-[1.125rem] bg-white border-[#F5D4CD] shadow-[0px_1px_2px_rgba(0,0,0,0.05)] border">
             <textarea
@@ -166,7 +170,7 @@
 import { useFormSubmit } from '@/composables/useFormSubmit'
 
 const { form, submit, loading } = useFormSubmit('VOLUNTEER', {
-  successMessage: "Thank you for volunteering! We'll reach out to you shortly.",
+  successMessage: "Thank you for applying! We'll reach out to you shortly.",
   errorMessage: 'Failed to submit your application. Please try again.',
   extraFields: { skill: '', portfolioLink: '' },
 })

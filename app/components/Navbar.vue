@@ -39,19 +39,13 @@
                     For Mentees
                 </nuxt-link>
             </div>
-             <li class="nav-link transitionEffect"
-            @click="closeDropdown">
-                 <nuxt-link to="/volunteer">
-                    volunteer
-                </nuxt-link>
-            </li>
             <li class="nav-link transitionEffect"
             @click="closeDropdown">
                 <nuxt-link to="/partnerships">
                     partnership
                 </nuxt-link>
             </li>
-             <li class="nav-link transitionEffect"
+            <li class="nav-link transitionEffect"
             @click="closeDropdown">
                 <nuxt-link to="/about">
                     about
@@ -59,16 +53,23 @@
             </li>
             <li class="nav-link transitionEffect"
             @click="closeDropdown">
-                <nuxt-link to="/donate">
-                    donate
-                </nuxt-link>
-            </li>
-            <li class="nav-link transitionEffect"
-            @click="closeDropdown">
                 <nuxt-link to="/resources">
                     resources
                 </nuxt-link>
-            </li>           
+            </li>  
+             <li class="nav-link transitionEffect"
+            @click="closeDropdown">
+                 <nuxt-link to="/career">
+                    career
+                </nuxt-link>
+            </li>
+           
+            <li class="nav-link transitionEffect"
+            @click="closeDropdown">
+                <nuxt-link to="/donate">
+                    donate
+                </nuxt-link>
+            </li>         
             <li class="nav-link transitionEffect"
             @click="closeDropdown">
                 <nuxt-link to="/shop">
@@ -258,13 +259,13 @@ const toggleMobileMentorship = () => {
 
 // Define mobile navigation links
 const mobileLinks = [
-  { to: '/volunteer', label: 'Volunteer' },
-  { to: '/partnerships', label: 'Partnership' },
-  { to: '/about', label: 'About' },
-  { to: '/donate', label: 'Donate' },
-  { to: '/resources', label: 'Resources' },
-  { to: '/shop', label: 'Shop' },
-  { to: '/contact', label: 'Contact' }
+    { to: '/partnerships', label: 'Partnership' },
+    { to: '/about', label: 'About' },
+    { to: '/donate', label: 'Donate' },
+    { to: '/resources', label: 'Resources' },
+    { to: '/career', label: 'Career' },
+    { to: '/shop', label: 'Shop' },
+    { to: '/contact', label: 'Contact' }
 ]
 
 // Close mobile menu on route change
