@@ -26,12 +26,19 @@
                             <NuxtImg src="/icons/logoLight.svg" class="w-32 md:w-40 lg:w-45.25"/>
                         </div>
                         <div class="social-links text-secondaryTheme basic-flex gap-4 justify-center">
-                            <Icon name="teenyicons:instagram-solid" size="30"/>
-                            <Icon name="ic:baseline-tiktok" size="30"/>
-                            <Icon name="iconoir:youtube-solid" size="30"/>
-                            <Icon name="uiw:facebook" size="30"/>
-                            <!-- <Icon name="prime:twitter" size="30"/>
-                            <Icon name="uiw:linkedin" size="30"/> -->
+                            <a href="https://www.instagram.com/spiriment_" target="_blank">
+                                <Icon name="teenyicons:instagram-solid" size="30"/>
+                            </a>
+                            <a href="https://www.tiktok.com/@spiriment_" target="_blank">
+                                <Icon name="ic:baseline-tiktok" size="30"/>
+                            </a>
+                            <a href="https://x.com/spiriment_" target="_blank">
+                                <Icon name="prime:twitter" size="30"/>
+                            </a>
+                            <a href="https://www.linkedin.com/company/spiriment/" target="_blank">
+                                <Icon name="uiw:linkedin" size="30"/>
+                            </a>
+                            <!-- <Icon name="uiw:facebook" size="30"/> -->
                         </div>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-8 md:gap-12 lg:gap-17 sm:justify-center">
