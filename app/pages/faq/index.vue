@@ -16,7 +16,7 @@
 
         <!-- Search bar -->
         <div class="mt-7 max-w-[500px] bg-white/10 border border-white/15 rounded-2xl flex items-center gap-3 px-5 py-3.5">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" class="flex-shrink-0 opacity-50">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" class="shrink-0 opacity-50">
             <circle cx="11" cy="11" r="8" stroke="#FFFAEC" stroke-width="1.8" stroke-linecap="round"/>
             <path d="M21 21L16.65 16.65" stroke="#FFFAEC" stroke-width="1.8" stroke-linecap="round"/>
           </svg>
@@ -39,7 +39,7 @@
         </div>
 
         <!-- Category count pills row -->
-        <div class="mt-6 flex flex-wrap gap-2">
+        <div v-if="faqCategories.length" class="mt-6 flex flex-wrap gap-2">
           <span
             v-for="cat in faqCategories"
             :key="cat.id"
@@ -53,7 +53,31 @@
     </div>
 
     <!-- ── Main Content ── -->
-    <div class="custom-width py-10 tab:py-14">
+
+    <!-- Loading state -->
+    <div v-if="pending" class="custom-width py-20">
+      <div class="flex flex-col items-center justify-center gap-3 text-secondaryTextTheme">
+        <svg class="animate-spin" width="28" height="28" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2.5" stroke-opacity="0.2"/>
+          <path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <p class="text-[0.9rem]">Loading FAQs…</p>
+      </div>
+    </div>
+
+    <!-- Error state -->
+    <div v-else-if="error" class="custom-width py-20 text-center">
+      <p class="text-[0.95rem] font-semibold text-primaryTheme mb-1">Couldn't load FAQs</p>
+      <p class="text-[0.85rem] text-secondaryTextTheme mb-4">Something went wrong while fetching this page. Please try again.</p>
+      <button
+        class="text-[0.85rem] font-semibold text-terracotaTheme underline"
+        @click="refresh()"
+      >
+        Retry
+      </button>
+    </div>
+
+    <div v-else class="custom-width py-10 tab:py-14">
 
       <!-- ── SEARCH RESULTS ── -->
       <div v-if="searchQuery.trim()">
@@ -76,10 +100,10 @@
               </span>
             </div>
             <button
-              class="w-full flex items-center justify-between gap-4 px-5 py-4 text-left transitionEffect hover:bg-primaryTheme/[0.03]"
+              class="w-full flex items-center justify-between gap-4 px-5 py-4 text-left transitionEffect hover:bg-primaryTheme/3"
               @click="toggle('s' + i)"
             >
-              <span class="text-[0.95rem] font-semibold leading-[150%] text-primaryTheme">{{ item.question }}</span> 
+              <span class="text-[0.95rem] font-semibold leading-[150%] text-primaryTheme">{{ item.question }}</span>
               <IconsAccordionIcon :open="openKey === 's' + i" />
             </button>
             <Transition name="accordion">
@@ -109,25 +133,10 @@
       </div>
 
       <!-- ── CATEGORY BROWSE ── -->
-      <div v-else class="flex flex-col tabMid:flex-row  tabMid:gap-10 tabLarge:gap-14">
+      <div v-else-if="faqCategories.length" class="flex flex-col tabMid:flex-row tabMid:gap-10 tabLarge:gap-14">
 
         <!-- ── Sidebar ── -->
         <aside class="tabMid:w-[230px] tabLarge:w-[260px] shrink-0">
-
-          <!-- Mobile: horizontal scrollable pills -->
-          <!-- <div class="flex tabMid:hidden gap-2 overflow-x-auto pb-2 hide-scrollbar -mx-1 px-1">
-            <button
-              v-for="cat in faqCategories"
-              :key="cat.id"
-              class="flex-shrink-0 flex items-center gap-2 text-[0.8rem] font-semibold px-4 py-2 rounded-full border transitionEffect whitespace-nowrap"
-              :class="activeCategory === cat.id
-                ? 'bg-primaryTheme text-secondaryTheme border-primaryTheme'
-                : 'bg-white text-primaryTheme border-primaryTheme/15 hover:border-primaryTheme/30'"
-              @click="setCategory(cat.id)"
-            >
-              {{ cat.label }}
-            </button>
-          </div> -->
 
           <!-- Tablet / Desktop: vertical nav -->
           <div class="hidden tabMid:block">
@@ -202,7 +211,7 @@
                     : 'border-primaryTheme/10'"
                 >
                   <button
-                    class="w-full flex items-center justify-between gap-4 px-5 py-5 text-left transitionEffect hover:bg-primaryTheme/[0.03]"
+                    class="w-full flex items-center justify-between gap-4 px-5 py-5 text-left transitionEffect hover:bg-primaryTheme/3"
                     :aria-expanded="openKey === cat.id + i"
                     @click="toggle(cat.id + i)"
                   >
@@ -252,6 +261,13 @@
         </div>
 
       </div>
+
+      <!-- No FAQs published at all -->
+      <div v-else class="text-center py-20">
+        <p class="text-[0.95rem] font-semibold text-primaryTheme mb-1">No FAQs available yet</p>
+        <p class="text-[0.85rem] text-secondaryTextTheme">Please check back later.</p>
+      </div>
+
     </div>
 
     <!-- ── Footer CTA ── -->
@@ -261,7 +277,7 @@
           <h3 class="text-[1.05rem] font-bold text-primaryWhite mb-1">Still have questions?</h3>
           <p class="text-[0.85rem] text-secondaryTextTheme leading-[160%]">Our support team is happy to help you out anytime.</p>
         </div>
-        <button class="flex-shrink-0 bg-secondaryTheme text-primaryTheme text-[0.85rem] font-bold px-6 py-3 rounded-full transitionEffect hoverEffect whitespace-nowrap">
+        <button class="shrink-0 bg-secondaryTheme text-primaryTheme text-[0.85rem] font-bold px-6 py-3 rounded-full transitionEffect hoverEffect whitespace-nowrap">
           Contact support
         </button>
       </div>
@@ -271,12 +287,24 @@
 </template>
 
 <script setup>
-import { faqCategories } from '@/data/faqData.js'
+// ── Data (via composable) ──────────────────────────────────────
+const { faqCategories, totalQuestions, pending, error, refresh } = useFaq()
 
 // ── State ───────────────────────────────────────────────────────
-const activeCategory = ref(faqCategories[0].id)
+const activeCategory = ref(null)
 const openKey = ref(null)
 const searchQuery = ref('')
+
+// Set the initial active category once data has loaded.
+watch(
+  faqCategories,
+  (cats) => {
+    if (cats.length && !activeCategory.value) {
+      activeCategory.value = cats[0].id
+    }
+  },
+  { immediate: true }
+)
 
 // ── Helpers ─────────────────────────────────────────────────────
 const setCategory = (id) => {
@@ -294,21 +322,17 @@ const toggle = (key) => {
 }
 
 // ── Computed ────────────────────────────────────────────────────
-const totalQuestions = computed(() =>
-  faqCategories.reduce((sum, cat) => sum + cat.faqs.length, 0)
-)
-
 const activeCategoryIndex = computed(() =>
-  faqCategories.findIndex((c) => c.id === activeCategory.value)
+  faqCategories.value.findIndex((c) => c.id === activeCategory.value)
 )
 
 const prevCategory = computed(() =>
-  activeCategoryIndex.value > 0 ? faqCategories[activeCategoryIndex.value - 1] : null
+  activeCategoryIndex.value > 0 ? faqCategories.value[activeCategoryIndex.value - 1] : null
 )
 
 const nextCategory = computed(() =>
-  activeCategoryIndex.value < faqCategories.length - 1
-    ? faqCategories[activeCategoryIndex.value + 1]
+  activeCategoryIndex.value < faqCategories.value.length - 1
+    ? faqCategories.value[activeCategoryIndex.value + 1]
     : null
 )
 
@@ -316,7 +340,7 @@ const searchResults = computed(() => {
   const q = searchQuery.value.trim().toLowerCase()
   if (!q) return []
   const results = []
-  faqCategories.forEach((cat) => {
+  faqCategories.value.forEach((cat) => {
     cat.faqs.forEach((faq) => {
       if (faq.question.toLowerCase().includes(q) || faq.answer.toLowerCase().includes(q)) {
         results.push({ ...faq, categoryLabel: cat.label })

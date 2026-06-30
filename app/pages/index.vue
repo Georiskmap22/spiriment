@@ -87,7 +87,8 @@ const overlappingCardContent = [
         detail: 'Answer a few questions to personalize your growth path',
         cardColor: '#FFFAEC',
         cardTheme: '#1D2F21',
-        imgSrc: ''
+        imgSrc: '',
+        videoUrl: 'set-spiritual-goals.mp4'
     },
     {
         id: 2,
@@ -95,7 +96,8 @@ const overlappingCardContent = [
         detail: 'Connect with someone who will walk with you and guide you',
         cardColor: '#FFFAEC',
         cardTheme: '#7B4034',
-        imgSrc: ''
+        imgSrc: '',
+        videoUrl: 'matched-with-mentor.mp4'
     },
     {
         id: 3,
@@ -108,10 +110,11 @@ const overlappingCardContent = [
     {
         id: 4,
         title: 'Join Group or 1-on-1 Sessions',
-        detail: 'Grow deeper with structured, encouraging mentorship',
+        detail: 'Grow deeper with structured and encouraging mentorship',
         cardColor: '#FFFAEC',
         cardTheme: '#6A551B',
-        imgSrc: ''
+        imgSrc: '',
+        videoUrl: 'one-on-one.mp4'
     },
 ]
 
