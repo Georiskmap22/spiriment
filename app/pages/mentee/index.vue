@@ -33,32 +33,33 @@ const slidingCardContents = [
         title: 'Track Your Bible Journey',
         description: 'Reflect, take notes, and mark your spiritual progress chapter by chapter',
         cardTheme: '#1D2F21',
-         imgSrc: 'mentorProfile.png',
-        imgWidth: '60.89%'
+        imgSrc: 'trackJourney.png',
+        imgWidth: '63.89%'
     },
     {
         id: 2,
         title: 'Flexible Mentorship Formats',
         description: 'Whether it’s weekly video calls or occasional messages, your mentor fits your rhythm',
         cardTheme: '#7B4034',
-         imgSrc: 'romans.png',
-        imgWidth: '60.89%'
+        imgSrc: 'flexibleMentorship2.png',
+        imgWidth: '63.89%'
     },
     {
         id: 3,
         title: 'Explore Topics That Matter to You',
         description: 'Study content around identity, purpose, prayer, leadership, and more',
         cardTheme: '#112851',
-         imgSrc: 'streak.png',
-        imgWidth: '60.89%'
+        imgSrc: 'exploreTopics4.png',
+        imgWidth: '68.89%',
+        imgOrder: '1'
     },
     {
         id: 4,
         title: 'Stay Accountable, Spiritually and Practically',
         description: 'Build habits, stay encouraged, and keep going even when it’s tough',
         cardTheme: '#6A551B',
-         imgSrc: 'conversation.png',
-        imgWidth: '60.89%'
+        imgSrc: 'footerImg2.png',
+        imgWidth: '62.89%'
     },
 ]
 
@@ -69,7 +70,8 @@ const overlappingCardContent = [
         detail: 'Answer a few questions to personalize your growth path',
         cardColor: '#FFFAEC',
         cardTheme: '#1D2F21',
-        imgSrc: ''
+        imgSrc: '',
+        videoUrl: 'set-spiritual-goals.mp4'
     },
     {
         id: 2,
@@ -77,7 +79,8 @@ const overlappingCardContent = [
         detail: 'Connect with someone who will walk with you and guide you',
         cardColor: '#FFFAEC',
         cardTheme: '#7B4034',
-        imgSrc: ''
+        imgSrc: '',
+        videoUrl: 'matched-with-mentor.mp4'
     },
     {
         id: 3,
@@ -93,7 +96,8 @@ const overlappingCardContent = [
         detail: 'Grow deeper with structured and encouraging mentorship',
         cardColor: '#FFFAEC',
         cardTheme: '#6A551B',
-        imgSrc: ''
+        imgSrc: '',
+        videoUrl: 'one-on-one.mp4'
     },
 ]
 

@@ -2,19 +2,19 @@
     <!-- <Navbar /> -->
     <section class="header bg-primaryTheme">
         <div class="custom-width basic-flex justify-between flex-col lg:flex-row">
-            <div class="w-full lg:w-[39.67%] mb-8 lg:mb-0 max-lg:pt-[6.63rem]">
+            <div class="w-full lg:w-[59.67%] mb-8 lg:mb-0 max-lg:pt-[6.63rem]">
                 <h1 class="font-bold text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-secondaryTheme mb-4 leading-tight">
-                    Grow in Faith. Together.
+                    Bible Study. Christian Mentorship. Life Transformation
                 </h1>
                 <p class="small-texts text-[1.125rem] md:text-[1.25rem] lg:text-[1.5rem] text-secondaryTheme font-semibold mb-5 lg:mb-5">
-                     Build lasting spiritual habits, study the Bible in a way that transform your daily life and connect with trusted Christian mentors.
+                     Develop consistent spiritual disciplines, study the Bible in ways that transform your daily life, and connect with trusted Christian mentors
                 </p>
                 <div class="flex justify-start lg:justify-start">
                     <UiDownloadButton :isDark="false" iconTheme="#1D2F21"/>
                 </div>
             </div>
             <div class="w-full lg:w-auto h-full mt-8 lg:mt-0">
-                <NuxtImg src="/images/productImage.png" class="md:max-h-[400px] lg:max-h-163.25 h-full w-full object-cover rounded-lg lg:rounded-none"/>
+                <NuxtImg src="/images/productImage.png" class="md:max-h-[400px] lg:max-h-163.25 h-full w-full object-cover rounded-lg lg:rounded-none" loading="eager"/>
             </div>
         </div>
     </section>
@@ -50,24 +50,24 @@ const slidingCardContents = [
         title: 'Track Your Bible Journey',
         description: 'Reflect, take notes, and mark your spiritual progress chapter by chapter',
         cardTheme: '#1D2F21',
-        imgSrc: 'romans.png',
-        imgWidth: '60.89%'
+        imgSrc: 'trackJourney.png',
+        imgWidth: '63.89%'
     },
     {
         id: 2,
         title: 'Flexible Mentorship Formats',
         description: 'Whether it’s weekly video calls or occasional messages, your mentor fits your rhythm',
         cardTheme: '#7B4034',
-        imgSrc: 'schedule.png',
-        imgWidth: '60.89%'
+        imgSrc: 'flexibleMentorship2.png',
+        imgWidth: '63.89%'
     },
     {
         id: 3,
         title: 'Explore Topics That Matter to You',
         description: 'Study content around identity, purpose, prayer, leadership, and more',
         cardTheme: '#112851',
-        imgSrc: 'sendRequest.png',
-        imgWidth: '60.89%',
+        imgSrc: 'exploreTopics4.png',
+        imgWidth: '68.89%',
         imgOrder: '1'
     },
     {
@@ -75,8 +75,8 @@ const slidingCardContents = [
         title: 'Stay Accountable, Spiritually and Practically',
         description: 'Build habits, stay encouraged, and keep going even when it’s tough',
         cardTheme: '#6A551B',
-        imgSrc: 'streak.png',
-        imgWidth: '60.89%'
+        imgSrc: 'footerImg2.png',
+        imgWidth: '62.89%'
     },
 ]
 

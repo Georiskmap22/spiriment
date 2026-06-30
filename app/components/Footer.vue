@@ -3,7 +3,7 @@
         <section class="footer-center custom-width pt-8 md:pt-10 lg:pt-[4.19rem] px-4 lg:px-0">
             <div class="top-section flex flex-col lg:flex-row basic-flex justify-between gap-8 lg:gap-0">
                 <div class="w-full lg:w-119 text-secondaryTheme text-center lg:text-left">
-                    <h1 class="font-bold text-[2rem] md:text-[2.5rem] lg:text-[3rem] leading-[120%] mb-4 leading-tight">Start Your Journey Today</h1>
+                    <h1 class="font-bold text-[2rem] md:text-[2.5rem] lg:text-[3rem] mb-4 leading-tight">Start Your Journey Today</h1>
                     <p class="small-texts text-[1.125rem] md:text-[1.25rem] lg:text-[1.5rem] font-semibold mb-6">
                         Spiritual growth takes intentionality and we're building the tools to help you thrive every day
                     </p>
@@ -16,7 +16,7 @@
                     class="absolute w-full h-full bg-[linear-gradient(to_top,#1D2F21,transparent,transparent,transparent,transparent,transparent,transparent,transparent)]"
                     >
                     </div>
-                    <NuxtImg src="/images/footerImg.png" class="w-full lg:max-w-[27.69rem] max-w-full mx-auto"/>
+                    <NuxtImg src="/images/footerImg2.png" class="w-full lg:max-w-[27.69rem] max-w-full mx-auto"/>
                 </div>
             </div>
             <div class="bottom-section py-8 md:py-10 lg:py-11">
@@ -33,7 +33,10 @@
                                 <Icon name="ic:baseline-tiktok" size="30"/>
                             </a>
                             <a href="https://x.com/spiriment_" target="_blank">
-                                <Icon name="prime:twitter" size="30"/>
+                                <Icon name="pajamas:twitter" size="30"/>
+                            </a>
+                            <a href="https://www.youtube.com/@Spiriment" target="_blank">
+                                <Icon name="si:youtube-line" size="30"/>
                             </a>
                             <a href="https://www.linkedin.com/company/spiriment/" target="_blank">
                                 <Icon name="uiw:linkedin" size="30"/>

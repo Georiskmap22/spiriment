@@ -37,7 +37,7 @@ const slidingCardContents = [
         cardTheme: '#A2B1A5',
         textTheme: '#162419',
         imgSrc: 'mentor1.png',
-        imgWidth: '60.89%'
+        imgWidth: '60.89%',
     },
     {
         id: 2,
@@ -76,7 +76,8 @@ const overlappingCardContent = [
         cardColor: '#162419',
         textTheme: '#162419',
         cardTheme: '#A2B1A5',
-        imgSrc: ''
+        imgSrc: '',
+        videoUrl: 'create-mentor-profile.mp4'
     },
     {
         id: 2,
