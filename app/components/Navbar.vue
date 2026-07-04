@@ -64,12 +64,12 @@
                 </nuxt-link>
             </li>
            
-            <li class="nav-link transitionEffect"
+            <!-- <li class="nav-link transitionEffect"
             @click="closeDropdown">
                 <nuxt-link to="/donate">
                     donate
                 </nuxt-link>
-            </li>         
+            </li>          -->
             <li class="nav-link transitionEffect"
             @click="closeDropdown">
                 <nuxt-link to="/shop">
@@ -210,8 +210,8 @@
                     <!-- Contact/Support Section -->
                     <div class="mt-8 pt-6 border-t border-secondaryTheme/20">
                         <div class="space-y-4">
-                            <a href="mailto:hello@spiriment.org" class="block text-secondaryTextTheme hover:text-secondaryTheme transition-colors">
-                                hello@spiriment.org
+                            <a href="mailto:info@spiriment.com" class="block text-secondaryTextTheme hover:text-secondaryTheme transition-colors">
+                                info@spiriment.com
                             </a>
                             <div class="flex space-x-4">
                                 <a href="/privacy" class="text-secondaryTextTheme hover:text-secondaryTheme transition-colors">
@@ -261,7 +261,7 @@ const toggleMobileMentorship = () => {
 const mobileLinks = [
     { to: '/partnerships', label: 'Partnership' },
     { to: '/about', label: 'About' },
-    { to: '/donate', label: 'Donate' },
+    // { to: '/donate', label: 'Donate' },
     { to: '/resources', label: 'Resources' },
     { to: '/career', label: 'Career' },
     { to: '/shop', label: 'Shop' },

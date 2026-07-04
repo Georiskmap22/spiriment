@@ -1,10 +1,10 @@
 <template>
     <!-- <Navbar /> -->
     <section class="header bg-primaryTheme">
-        <div class="custom-width basic-flex justify-between flex-col lg:flex-row">
+        <div class="custom-width basic-flex justify-between flex-col lg:flex-row gap-10 min-h-[630px]">
             <div class="w-full lg:w-[59.67%] mb-8 lg:mb-0 max-lg:pt-[6.63rem]">
                 <h1 class="font-bold text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-secondaryTheme mb-4 leading-tight">
-                    Bible Study. Christian Mentorship. Life Transformation
+                    Bible Study. <br> Christian Mentorship. <br> Life Transformation
                 </h1>
                 <p class="small-texts text-[1.125rem] md:text-[1.25rem] lg:text-[1.5rem] text-secondaryTheme font-semibold mb-5 lg:mb-5">
                      Develop consistent spiritual disciplines, study the Bible in ways that transform your daily life, and connect with trusted Christian mentors
@@ -13,8 +13,8 @@
                     <UiDownloadButton :isDark="false" iconTheme="#1D2F21"/>
                 </div>
             </div>
-            <div class="w-full lg:w-auto h-full mt-8 lg:mt-0">
-                <NuxtImg src="/images/productImage.png" class="md:max-h-[400px] lg:max-h-163.25 h-full w-full object-cover rounded-lg lg:rounded-none" loading="eager"/>
+            <div class="w-full lg:w-auto mt-8 lg:mt-0 flex items-center justify-center max-lg:mb-[6.63rem]">
+                <NuxtImg src="/images/homeImage.png" class="md:max-h-[400px] lg:max-h-163.25 w-full h-full object-cover max-lg:object-contain rounded-lg lg:rounded-none" loading="eager"/>
             </div>
         </div>
     </section>

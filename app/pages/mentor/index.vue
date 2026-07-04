@@ -33,7 +33,7 @@ const slidingCardContents = [
     {
         id: 1,
         title: 'Structure Without Stress',
-        description: 'Reflect, take notes, and mark your spiritual progress chapter by chapter',
+        description: 'Stay on top of every mentee with organized schedules, notes, and milestones',
         cardTheme: '#A2B1A5',
         textTheme: '#162419',
         imgSrc: 'mentor1.png',

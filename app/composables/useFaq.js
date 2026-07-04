@@ -1,10 +1,5 @@
-// composables/useFaq.js
-//
-// Fetches FAQs from the Paxify API and exposes them grouped by category,
-// in the shape the FAQ page expects (faqCategories: [{ id, label, icon, faqs: [...] }]).
-
-// const BASE_URL = 'https://api.paxify.org/api'
-const BASE_URL = 'http://localhost:6802/api'
+const BASE_URL = 'https://api.paxify.org/api'
+// const BASE_URL = 'http://localhost:6802/api'
 
 // Generic fallback icon (the API has no icon field per category).
 const DEFAULT_ICON = `<path d="M12 18h.01M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>`
@@ -19,7 +14,7 @@ export const useFaq = () => {
     pending,
     error,
     refresh,
-  } = useFetch(`${BASE_URL}/admin/faq`, {
+  } = useFetch(`${BASE_URL}/faq/published`, {
     key: 'admin-faq-list',
     transform: (res) => (res?.success ? res.response : []),
     default: () => [],

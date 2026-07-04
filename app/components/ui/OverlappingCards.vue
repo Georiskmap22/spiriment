@@ -74,8 +74,8 @@
                         v-if="item.videoUrl"
                         class="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-colors duration-300"
                     >
-                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/90 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300 shadow-lg">
-                            <svg class="w-6 h-6 md:w-7 md:h-7 text-black ml-0.5" viewBox="0 0 24 24" fill="currentColor">
+                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-primaryTheme/90 group-hover:bg-black/90 flex items-center justify-center opacity-100 scale-90 group-hover:scale-100 transition-all duration-300 shadow-lg">
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-black ml-0.5" viewBox="0 0 24 24" fill="white">
                                 <path d="M8 5v14l11-7z" />
                             </svg>
                         </div>

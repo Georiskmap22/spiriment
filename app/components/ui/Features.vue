@@ -80,7 +80,7 @@ const images = [
 ]
 
 const texts2 = [
-    { title: 'Get Bible content based on your spiritual maturity and interests 1', bg: 'bg-primaryTheme' },
+    { title: 'Get Bible content based on your spiritual maturity and interests', bg: 'bg-primaryTheme' },
     { title: 'Connect with trusted spiritual mentors who are there to help you grow', bg: 'bg-[#7B4034]' },
     { title: 'Stay consistent with smart notifications and progress tracking', bg: 'bg-[#112851]' },
     { title: 'Join the sessions or get support in your preferred format', bg: 'bg-[#6A551B]' }

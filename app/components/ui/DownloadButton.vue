@@ -126,7 +126,7 @@ defineProps({
   /** Set to true to disable the Android button and show "Coming Soon" */
   androidDisabled: {
     type: Boolean,
-    default: false
+    default: true
   }
 })
 

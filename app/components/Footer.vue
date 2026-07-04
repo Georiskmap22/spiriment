@@ -111,13 +111,13 @@ const footerLinks = [
         id: 2,
         title: 'Quicklinks',
         paths: [
+            // {
+            //     name: 'Donate',
+            //     route: '/donate'
+            // },
             {
-                name: 'Donate',
-                route: '/donate'
-            },
-            {
-                name: 'Volunteer',
-                route: '/volunteer'
+                name: 'Career',
+                route: '/career'
             },
             {
                 name: 'Shop',
