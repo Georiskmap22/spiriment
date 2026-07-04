@@ -88,7 +88,8 @@ const overlappingCardContent = [
         detail: 'Track your habits, reflections, and streaks',
         cardColor: '#FFFAEC',
         cardTheme: '#112851',
-        imgSrc: ''
+        imgSrc: '',
+        videoUrl: 'start-studying-the-bible.mp4'
     },
     {
         id: 4,

@@ -56,7 +56,7 @@
 
                 <!-- VIDEO CARD -->
                 <div 
-                class="video-card group relative h-48 md:h-64 lg:h-91 w-full lg:w-[25.19rem] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-secondaryTheme mx-auto lg:mx-0 overflow-hidden transition-transform duration-300 ease-out hover:scale-[1.02] hover:shadow-2xl"
+                class="video-card group relative h-70 lg:h-91 w-full lg:w-[25.19rem] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-secondaryTheme mx-auto lg:mx-0 overflow-hidden transition-transform duration-300 ease-out hover:scale-[1.02] hover:shadow-2xl"
                 :class="item.videoUrl ? 'cursor-pointer' : ''"
                 :style="{ backgroundColor: item.videoUrl ? 'transparent' : item.cardColor }"
                 @click="item.videoUrl && openVideoModal(item.videoUrl)"
