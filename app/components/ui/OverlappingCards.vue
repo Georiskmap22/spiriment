@@ -8,7 +8,7 @@
                 v-for="(item, index) in cardContent"
                 :key="item.id"
                 class="custom-width rounded-2xl md:rounded-[1.125rem] lg:rounded-[1.25rem]
-                    px-6 md:px-8 lg:px-12.5 flex flex-col lg:flex-row justify-between
+                    px-6 md:px-8 lg:px-12.5 flex flex-col gap-4 lg:flex-row justify-between
                     transition-all duration-500 h-auto md:h-160 lg:min-h-[42.12rem] p-8 md:p-16 lg:p-22.5
                     sticky top-20"
                 :class="index === 0 ? 'top-[120px]' : ''"
@@ -18,7 +18,7 @@
                     backgroundColor: item.cardTheme
                 }"
             >
-                <div class="max-w-full lg:max-w-135 mb-8 lg:mb-0">
+                <div class="max-w-full lg:max-w-135 mb-8 lg:mb-0 tab:flex-[60%]">
                     <h2 class="font-bold leading-[120%] text-secondaryTheme mb-4 text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] text-center lg:text-left"
                     :style="{ color: item.textTheme ? item.textTheme: '#FFFAEC'}"
                     >
@@ -56,7 +56,7 @@
 
                 <!-- VIDEO CARD -->
                 <div 
-                class="video-card group relative h-70 lg:h-91 w-full lg:w-[25.19rem] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-secondaryTheme mx-auto lg:mx-0 overflow-hidden transition-transform duration-300 ease-out hover:scale-[1.02] hover:shadow-2xl"
+                class="video-card group relative h-70 lg:h-91 w-full lg:w-[25.19rem] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-secondaryTheme mx-auto lg:mx-0 overflow-hidden transition-transform duration-300 ease-out hover:scale-[1.02] hover:shadow-2xl tab:flex-[40%]"
                 :class="item.videoUrl ? 'cursor-pointer' : ''"
                 :style="{ backgroundColor: item.videoUrl ? 'transparent' : item.cardColor }"
                 @click="item.videoUrl && openVideoModal(item.videoUrl)"
@@ -65,7 +65,7 @@
                             v-if="item.videoUrl"
                             :src="resolvePosterUrl(item.videoUrl)"
                             loading="lazy"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            class=" object-cover h-full w-full transition-transform duration-500 group-hover:scale-105"
                             alt=""
                         />
 

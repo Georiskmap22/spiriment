@@ -1,5 +1,6 @@
 // ─────────────────────────────────────────────────────────────
 //  Spiriment FAQ Database
+//  Updated per official "Spiriment FAQs" PDF (July 2026)
 //  Each category has: id, label, icon (SVG inner path string), faqs[]
 //  Every faq item has: question, answer
 // ─────────────────────────────────────────────────────────────
@@ -7,34 +8,34 @@
 export const faqCategories = [
   {
     id: 'general',
-    label: 'General & Getting Started',
+    label: 'General & Free Access',
     icon: `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
            <path d="M12 16v-4M12 8h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>`,
     faqs: [
       {
-        question: 'Is Spiriment free to use?',
+        question: 'Do I need to pay to read the Bible?',
         answer:
-          'Yes! Core Bible reading—including unlimited access to all translations and languages—is always completely free. We believe reading the Word should be accessible to everyone. We offer optional paid subscription tiers (Basic, Pro, and Premium) for users who want discipline tracking, advanced organisation tools, AI insights, and mentorship features.',
+          'No. Bible reading is free for everyone, forever. You can read any book and chapter in any available translation at no cost.',
       },
       {
-        question: 'Does Spiriment offer a free trial for the paid features?',
+        question: 'Do I need to pay to bookmark, highlight, or reflect?',
         answer:
-          'Yes, all new users get a 2-week free trial of our Premium tier. During this time, you have full access to all features—including advanced AI insights and mentorship—without needing to enter a credit card. At the end of the trial, your account will automatically convert to the Basic tier (€3/month) unless you select a different plan.',
+          'No. Bookmarks, verse highlights, and personal reflections are free for all users. You can view your full bookmarks and reflections lists without a subscription.',
+      },
+      {
+        question: 'What is the minimum age to use Spiriment?',
+        answer:
+          'You must be 15 years or older to create a Spiriment account.',
       },
       {
         question: 'What devices can I use Spiriment on?',
         answer:
-          'Spiriment is fully cross-platform! You can download the native app on your iOS or Android device, or access the platform directly from your Web Browser. Your progress, streaks, and data sync seamlessly across all platforms.',
-      },
-      {
-        question: 'Does Spiriment offer any other resources?',
-        answer:
-          'Yes! We have a dedicated Spiriment Blog accessible via our website and app. Our team regularly publishes articles on faith, mentorship, spiritual growth, and app updates to encourage you on your journey.',
+          'Spiriment is fully cross-platform. You can download the native app on iOS or Android, or access the platform from your web browser. Your progress, streaks, and data sync seamlessly across all platforms.',
       },
       {
         question: 'Is my personal reflection and session data private?',
         answer:
-          'Yes, absolutely. All your personal reflections, bookmarks, highlights, and direct messages are securely stored. Mentors can see your progress to guide you, but your personal notes remain private unless you choose to share them.',
+          'Yes. All your personal reflections, bookmarks, highlights, and direct messages are securely stored. Mentors can see your progress to guide you, but your personal notes remain private unless you choose to share them.',
       },
     ],
   },
@@ -49,56 +50,66 @@ export const faqCategories = [
       {
         question: 'How do I sign up as a Mentee?',
         answer:
-          "Signing up as a mentee is quick and simple! You can register using your email or Google account. During onboarding, you'll be asked to provide some basic details (like your name, location, and age) so we can personalise your experience and help match you with the right mentor for your journey.",
+          "Signing up as a mentee is quick and simple. You can register using your email or Google account (you must be 15 or older). During onboarding, you'll provide some basic details so we can personalise your experience and help match you with the right mentor.",
       },
       {
         question: 'How do I apply to become a Mentor?',
         answer:
-          'We take mentorship seriously, so all mentors go through a thorough application process. After selecting the "Mentor" role during signup, you will be guided through a comprehensive onboarding questionnaire. You\'ll be asked about your Christian experience, spiritual journey, church affiliation, leadership roles, areas of spiritual expertise, and your capacity to take on mentees.',
+          'After selecting the "Mentor" role during signup, you will be guided through a comprehensive onboarding questionnaire covering your Christian experience, spiritual journey, church affiliation, leadership roles, areas of spiritual expertise, and capacity to take on mentees.',
       },
       {
         question: 'Do I need to be approved to be a Mentor?',
         answer:
-          'Yes. To ensure the highest quality of guidance and safety for our community, every mentor application is reviewed by our admin team. Once you complete your application (which includes uploading a short video introduction and a profile image), your account will be placed in a "Pending Approval" state until our team reviews and approves your qualifications.',
+          'Yes. Every mentor application is reviewed by our admin team, including a short video introduction and a profile image. Your account stays in "Pending Approval" until the team reviews and approves your qualifications.',
       },
     ],
   },
 
   {
     id: 'features',
-    label: 'Core Features & Mentorship',
+    label: 'Plans & Features',
     icon: `<path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
            <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>`,
     faqs: [
       {
-        question: 'What Bible reading features are included?',
+        question: "What's the difference between Free and Basic?",
         answer:
-          'Spiriment gives you everything you need to study effectively. You can track your daily reading streaks, view your progress on a monthly calendar, group your reflections by Bible book, and use colour-coded highlights and unlimited bookmarks.',
+          'Free lets you read the Bible and keep personal study notes (bookmarks, highlights, reflections). Basic (€3/month) adds reading plans, daily streaks, progress reports, quizzes, and the leaderboard.',
       },
       {
-        question: 'How does the Mentorship program work?',
+        question: "What's the difference between Pro and Premium?",
         answer:
-          'Spiriment pairs you with experienced mentors to guide your spiritual journey! You can view mentor profiles, request sessions, and schedule one-on-one in-app Video Calls directly in the app. After your session, you can write personal session notes, leave reviews for your mentor, and receive detailed progress reports with AI-generated summaries to help you remember key takeaways. Mentorship access depends on your subscription tier.',
+          'Both include all Basic features, all AI tools, and mentorship access. The main difference is sessions per month: Pro gets 1 session, Premium gets 4 sessions. Premium also includes priority support and early access to new features.',
+      },
+      {
+        question: 'How does the daily reading streak work?',
+        answer:
+          'Read in the app for at least 5 minutes in a day to count that day toward your streak. Streak tracking requires Basic or higher (or an active trial).',
+      },
+      {
+        question: 'How many mentor sessions can I book?',
+        answer:
+          'Pro members get 1 session per calendar month; Premium members get 4 sessions per calendar month. Basic and Free members cannot book sessions. Your remaining sessions are shown on the booking screen.',
       },
       {
         question: 'How do I book a session with a Mentor?',
         answer:
-          'Mentors set their own availability schedules within the app. Mentees can browse through approved mentor profiles, review their areas of spiritual expertise, and send a Mentorship Request. Once accepted, you can instantly book video call sessions directly into their calendar.',
+          'Mentors set their own availability. Mentees can browse approved mentor profiles, review their areas of expertise, and send a Mentorship Request. Once accepted, you can book a video call session directly into their calendar, subject to your plan\'s monthly session limit.',
       },
       {
         question: 'Can I message my mentor outside of video sessions?',
         answer:
-          'Yes! Spiriment features a secure, in-app direct messaging system. You can chat with your mentor to ask quick questions, share prayer requests, or follow up on previous sessions without ever leaving the app.',
-      },
-      {
-        question: 'Are there Group Sessions?',
-        answer:
-          'Yes! In addition to one-on-one sessions, mentors occasionally host Group Mentorship sessions that you can join. These are fantastic opportunities to learn alongside other members of the Spiriment community.',
+          'Yes. Spiriment features a secure, in-app direct messaging system so you can chat with your mentor between sessions.',
       },
       {
         question: 'How does Spiriment use Artificial Intelligence (AI)?',
         answer:
-          "We use AI to enhance your Bible study, not replace it. Our AI provides helpful verse summaries, historical/theological context, cross-references, and personalised reading recommendations based on the books you haven't read yet. It can also suggest reflection prompts to help you dive deeper into the text.",
+          "AI is available on Pro and Premium to enhance your Bible study, not replace it. It provides verse summaries, historical/theological context, cross-references, personalised reading recommendations, and reflection prompts.",
+      },
+      {
+        question: 'Can I switch plans later?',
+        answer:
+          'Yes. You can upgrade or downgrade anytime from the app or the Stripe billing portal.',
       },
     ],
   },
@@ -110,37 +121,62 @@ export const faqCategories = [
            <path d="M2 10h20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>`,
     faqs: [
       {
+        question: 'Is there a Free tier?',
+        answer:
+          'Yes. Free access includes Bible reading in any translation plus personal study notes: bookmarks, highlights, and reflections — at no cost, forever.',
+      },
+      {
         question: 'What is included in the Basic Tier?',
         answer:
-          'The Basic Tier costs just €3/month and is designed to help you build consistent daily reading habits. It includes: access to all Bible reading plans, daily streak tracking and a monthly calendar view, unlimited verse bookmarks and colour-coded highlights, personal reflections grouped by Bible book, monthly and yearly reading progress reports, push notifications and daily reminders, and lifetime data storage for as long as your subscription is active.',
+          'The Basic Tier costs €3/month and adds: all Bible reading plans, daily streak tracking (5 minutes of reading per day), progress reports, quizzes, and the leaderboard, on top of everything in Free.',
       },
       {
         question: 'What do I get with the Pro Tier?',
         answer:
-          'The Pro Tier costs €5/month and adds AI-powered tools and basic mentorship to everything in the Basic tier. You will receive: AI-generated verse summaries and context, personalised AI reading recommendations, AI-assisted reflection prompts, 1 mentorship session per month (up to 1 hour), and AI-generated session summaries and history tracking.',
+          'The Pro Tier costs €5/month and includes everything in Basic plus all AI tools (verse summaries, context, personalised recommendations, reflection prompts) and 1 mentorship session per calendar month.',
       },
       {
         question: 'What does the Premium Tier offer?',
         answer:
-          "The Premium Tier costs €7.50/month and gives you complete access to everything Spiriment has to offer. This includes all Pro features plus: advanced AI insights with deep-dive analysis, cross-references, and theological context; unlimited mentorship (up to 4 sessions / 4 hours total per month); priority mentor matching; advanced session reports and analytics; family Bible study reports (if you are on a family plan); and early access to new features and priority customer support.",
+          'The Premium Tier costs €7.50/month and includes everything in Pro plus up to 4 mentorship sessions per calendar month, priority customer support, and early access to new features.',
       },
     ],
   },
 
   {
     id: 'billing',
-    label: 'Managing Your Subscription',
+    label: 'Trial & Billing',
     icon: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>`,
     faqs: [
       {
-        question: 'How do I manage my subscription?',
+        question: 'What happens when my free trial ends?',
         answer:
-          'Every user is provided with a secure, personal subscription management webpage. From your dashboard, you can view your current tier, see your billing history, upgrade or downgrade your plan, update your payment method, and view usage statistics like your current streak or remaining mentorship sessions.',
+          "Every new user gets a 7-day Premium trial with no credit card required. You'll receive email reminders 3 days and 1 day before it ends. If you don't subscribe, you return to Free access — you are never charged automatically, and you keep Bible reading, bookmarks, highlights, and reflections at no cost.",
       },
       {
-        question: 'Can I upgrade, downgrade, or cancel at any time?',
+        question: 'What happens if my payment fails?',
         answer:
-          'Yes! You have full control. You can change your tier or cancel your subscription at any time. If you choose to cancel, you will retain access to your paid features until the end of your current billing cycle.',
+          'You get a 1-day grace period during which access continues. If payment is still not resolved after 1 day, your account returns to Free access until you update your payment method.',
+      },
+      {
+        question: 'Can I cancel anytime?',
+        answer:
+          'Yes. Cancel from the Stripe billing portal. You keep your paid features until the end of your current billing period, then return to Free access.',
+      },
+      {
+        question: 'Do you offer refunds?',
+        answer:
+          'No refunds are given for the current billing period once charged. You can cancel anytime to avoid future charges.',
+      },
+      {
+        question: 'What payment methods are accepted?',
+        answer:
+          'Credit/debit cards, Apple Pay, and Google Pay via secure Stripe checkout. All prices are listed in EUR (€).',
+      },
+      {
+        question: 'How do I manage my subscription?',
+        answer:
+          'You can manage your plan from the app or the Stripe billing portal — view your current tier, billing history, upgrade or downgrade, update your payment method, and see usage stats like your streak or remaining mentorship sessions.',
       },
     ],
   },
@@ -153,19 +189,29 @@ export const faqCategories = [
            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>`,
     faqs: [
       {
-        question: 'Does Spiriment offer Family Plans?',
+        question: 'How do family plans work?',
         answer:
-          'Yes! Family plans allow parents to manage subscriptions for themselves and their children under one unified account and a single payment method. Every family member gets their own personal account and can choose the subscription tier that fits them best.',
+          'A parent (the plan owner) pays for all household members with one payment method. Each member has their own login and can choose their own subscription tier. Manage members from Profile → Family Plan.',
       },
       {
-        question: 'Are there discounts for children and teens?',
+        question: 'How do I add someone to my family plan?',
         answer:
-          'Absolutely! We want to encourage spiritual growth in younger generations. Children ages 10–14 receive a 50% discount on any tier. Teens ages 15–18 receive a 30% discount on any tier. Adult family members pay the standard rate.',
+          "Enter their email in Family Plan — they must already have a Spiriment account. Complete Stripe checkout on your account, and they'll receive welcome and activation emails.",
       },
       {
-        question: 'What features do parents get on a Family Plan?',
+        question: 'Can family members have different tiers?',
         answer:
-          'Parents have access to a shared dashboard where they can view reading progress for all family members, see combined monthly and yearly family reading reports, set spending limits per child, and easily upgrade or downgrade individual member tiers.',
+          'Yes. Each member can be on Basic, Pro, or Premium independently. A parent on Premium does not automatically give Pro or Premium features to a child on Basic.',
+      },
+      {
+        question: 'Can my teenager see the family activity dashboard?',
+        answer:
+          "Only the plan owner sees all members' reading streaks and activity. Other members see a read-only view of their own tier and plan info.",
+      },
+      {
+        question: 'Is a family plan the same as adding someone to a church plan?',
+        answer:
+          "No. Family plans add members by email. Church plans use a church code or slug instead — see the Church Plans section.",
       },
     ],
   },
@@ -178,19 +224,34 @@ export const faqCategories = [
            <path d="M10 22v-4h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>`,
     faqs: [
       {
-        question: 'Can my church sign up as a group?',
+        question: 'How do church plans work?',
         answer:
-          'Yes! Churches can purchase bulk subscriptions for their congregation (minimum of 10 members required). A designated church administrator manages all member subscriptions from a centralized dashboard.',
+          'Churches purchase bulk subscriptions for their congregation (10-member minimum). A church administrator manages all member subscriptions from a centralized church portal.',
       },
       {
-        question: 'What are the benefits and discounts of a Church Plan?',
+        question: "How do I join my church's plan?",
         answer:
-          'All members on a Church Plan automatically receive a 20% discount on any tier. Large churches with 50 or more members receive an additional 5% discount (25% total). Church plans also offer the option to include custom branding (church logo and colors) inside member accounts.',
+          "Go to Profile → Church in the app and enter your church's code or slug. Your pastor or administrator approves your request. You don't join a church plan by email like a family plan.",
+      },
+      {
+        question: 'Can church members change their own tier?',
+        answer:
+          'No. The church administrator assigns tiers and manages billing centrally. Members use the features of whichever tier they are assigned.',
+      },
+      {
+        question: 'What is the minimum church plan size?',
+        answer:
+          'A minimum of 10 members is required to start a church plan.',
+      },
+      {
+        question: 'What discount do church members get?',
+        answer:
+          'All members on a Church Plan receive 20% off any tier automatically. Large churches with 50 or more members receive an additional discount, for 25% off total.',
       },
       {
         question: 'How does the church administrator manage members?',
         answer:
-          'Church administrators are provided with a dedicated Church Admin Portal. From this dashboard, they can easily add or remove members, upgrade/downgrade tiers in bulk, manage the single church billing account, generate reports, and view combined engagement analytics for the entire congregation.',
+          'Church administrators use a dedicated Church Admin Portal to add or remove members, manage tiers in bulk, handle the single church billing account, and view combined engagement analytics for the congregation.',
       },
     ],
   },
@@ -202,9 +263,43 @@ export const faqCategories = [
            <line x1="7" y1="7" x2="7.01" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
     faqs: [
       {
-        question: 'Are there any other discounts available?',
+        question: 'Is it cheaper for teenagers?',
         answer:
-          'Yes, we offer a few other special discounts. Mentors can get the Basic tier (Bible tools only) for 50% off (€1.50/month). To access full mentorship features to guide others, they pay the standard Pro or Premium rates. App Ambassadors with a valid referral code receive a 20% discount on any tier. Note: Only one discount applies per user — the system will automatically apply the highest discount you are eligible for.',
+          'Yes. Users aged 15–18 get 30% off any tier automatically — for example, Basic is €2.10/month instead of €3.00.',
+      },
+      {
+        question: 'Do mentors pay the same as mentees?',
+        answer:
+          'No. Verified mentors get 30% off all tiers — for example, Basic is €2.10/month, Pro is €3.50/month, and Premium is €5.25/month.',
+      },
+      {
+        question: 'Can I use a promo or referral code?',
+        answer:
+          'Yes. Enter an ambassador or referral code on the subscription screen before checkout for a discount, typically 20% off any tier.',
+      },
+      {
+        question: 'Can I combine discounts?',
+        answer:
+          'No. Only one discount applies per person — the system automatically applies the best discount you\'re eligible for. Discounts cannot be stacked (for example, a church discount and an ambassador discount can\'t be combined).',
+      },
+    ],
+  },
+
+  {
+    id: 'support',
+    label: 'Support',
+    icon: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+           <path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>`,
+    faqs: [
+      {
+        question: 'Where can I get help?',
+        answer:
+          'Use Help & Support in your profile to open an in-app support ticket. Premium members receive priority support.',
+      },
+      {
+        question: 'Which plan should I start with?',
+        answer:
+          'Try the 7-day Premium trial included for all new users to explore AI tools and mentorship. Before the trial ends, choose Basic, Pro, or Premium — or continue on Free at no charge.',
       },
     ],
   },
