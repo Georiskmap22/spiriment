@@ -76,7 +76,7 @@
               </span>
             </div>
             <button
-              class="w-full flex items-center justify-between gap-4 px-5 py-4 text-left transitionEffect hover:bg-primaryTheme/[0.03]"
+              class="w-full flex items-center justify-between gap-4 px-5 py-4 text-left transitionEffect hover:bg-primaryTheme/3"
               @click="toggle('s' + i)"
             >
               <span class="text-[0.95rem] font-semibold leading-[150%] text-primaryTheme">{{ item.question }}</span> 

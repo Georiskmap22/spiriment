@@ -86,7 +86,8 @@ const overlappingCardContent = [
         cardColor: '#5E3128',
         textTheme: '#5E3128',
         cardTheme: '#F5D4CD',
-        imgSrc: ''
+        imgSrc: '',
+        videoUrl: 'get-matched-thoughtfully.mp4'
     },
     {
         id: 3,
@@ -95,7 +96,8 @@ const overlappingCardContent = [
         cardColor: '#0D1F3E',
         textTheme: '#0D1F3E',
         cardTheme: '#BAC7DE',
-        imgSrc: ''
+        imgSrc: '',
+        videoUrl: 'lead-sessions.mp4'
     },
     {
         id: 4,
@@ -104,7 +106,8 @@ const overlappingCardContent = [
         cardColor: '#6A551B',
         textTheme: '#6A551B',
         cardTheme: '#FFFAEC',
-        imgSrc: ''
+        imgSrc: '',
+        videoUrl: 'track-and-encourage.mp4'
     },
 ]
 
