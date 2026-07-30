@@ -112,7 +112,7 @@ defineProps({
   },
   iosLink: {
     type: String,
-    default: 'https://apps.apple.com'
+    default: 'https://apps.apple.com/nl/app/spiriment/id6775780242?l=en-GB'
   },
   androidLink: {
     type: String,
@@ -121,12 +121,12 @@ defineProps({
   /** Set to true to disable the iOS button and show "Coming Soon" */
   iosDisabled: {
     type: Boolean,
-    default: true
+    default: false
   },
   /** Set to true to disable the Android button and show "Coming Soon" */
   androidDisabled: {
     type: Boolean,
-    default: true
+    default: false
   }
 })
 

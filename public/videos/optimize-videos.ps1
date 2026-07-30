@@ -1,5 +1,6 @@
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 # optimize-videos.ps1
-# Run this from inside your public/videos folder (where your source .mp4 files live)
+# Run this from inside your public/videos folder (where your source .mp4 files live) - cd C:\Users\Testing\OneDrive\Desktop\Projects\Spiriment\public\videos
 
 $posterDir = "posters"
 $optimizedDir = "optimized"
