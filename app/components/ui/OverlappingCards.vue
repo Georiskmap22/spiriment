@@ -55,20 +55,28 @@
                 </div>
 
                 <!-- VIDEO CARD -->
+                <!-- VIDEO / IMAGE CARD -->
                 <div 
-                class="video-card group relative h-70 lg:h-91 w-full lg:w-[25.19rem] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-secondaryTheme mx-auto lg:mx-0 overflow-hidden transition-transform duration-300 ease-out hover:scale-[1.02] hover:shadow-2xl tab:flex-[40%]"
+                class="video-card group relative h-100 lg:h-120 w-full lg:w-[25.19rem] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-secondaryTheme mx-auto lg:mx-0 overflow-hidden transition-transform duration-300 ease-out hover:scale-[1.02] hover:shadow-2xl tab:flex-[40%]"
                 :class="item.videoUrl ? 'cursor-pointer' : ''"
-                :style="{ backgroundColor: item.videoUrl ? 'transparent' : item.cardColor }"
+                :style="{ backgroundColor: (item.videoUrl || item.imageUrl) ? 'transparent' : item.cardColor }"
                 @click="item.videoUrl && openVideoModal(item.videoUrl)"
                 >
                         <img
                             v-if="item.videoUrl"
                             :src="resolvePosterUrl(item.videoUrl)"
                             loading="lazy"
-                            class=" object-cover h-full w-full transition-transform duration-500 group-hover:scale-105"
+                            class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105"
                             alt=""
                         />
 
+                        <img
+                            v-else-if="item.imageUrl"
+                            :src="resolveImageUrl(item.imageUrl)"
+                            loading="lazy"
+                            class="object-cover h-full w-full"
+                            alt=""
+                        />
                     <!-- hover overlay + play icon, only when a video exists -->
                     <div
                         v-if="item.videoUrl"
@@ -151,6 +159,11 @@ const resolvePosterUrl = (url) => {
     if (!url) return ''
     const base = url.replace(/\.[^/.]+$/, '')
     return `/videos/posters/${base}-poster.jpg`
+}
+
+const resolveImageUrl = (url) => {
+    if (!url) return ''
+    return url.startsWith('http') ? url : `/images/${url}`
 }
 
 const openVideoModal = (url) => {

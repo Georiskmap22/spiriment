@@ -194,7 +194,7 @@ const overlappingCardContent = [
         cardColor: '#162419',
         textTheme: '#162419',
         cardTheme: '#A2B1A5',
-        imgSrc: ''
+        imageUrl: 'mentees.png'
     },
     {
         id: 2,
@@ -203,7 +203,7 @@ const overlappingCardContent = [
         cardColor: '#5E3128',
         textTheme: '#5E3128',
         cardTheme: '#F5D4CD',
-        imgSrc: ''
+        imageUrl: 'signin1.png'
     },
     {
         id: 3,
@@ -212,7 +212,7 @@ const overlappingCardContent = [
         cardColor: '#0D1F3E',
         textTheme: '#0D1F3E',
         cardTheme: '#BAC7DE',
-        imgSrc: ''
+        imageUrl: 'dashboard.png'
     },
     {
         id: 4,
@@ -221,7 +221,7 @@ const overlappingCardContent = [
         cardColor: '#6A551B',
         textTheme: '#6A551B',
         cardTheme: '#FFFAEC',
-        imgSrc: ''
+        imageUrl: 'bibleReading.png'
     },
 ]
  
